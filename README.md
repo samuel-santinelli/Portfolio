@@ -78,8 +78,8 @@ Se você deseja contribuir com este projeto, sinta-se à vontade para abrir um P
 
 Se você tiver alguma dúvida ou quiser entrar em contato comigo, pode me encontrar em:
 
-- **LinkedIn**: [seu-perfil-linkedin](https://www.linkedin.com/in/samuel-santinelli)
-- **GitHub**: [seu-usuario-github](https://github.com/samuel-santinelli)
+- **LinkedIn**: [samuel-santinelli](https://www.linkedin.com/in/samuel-santinelli)
+- **GitHub**: [samuel-santinelli](https://github.com/samuel-santinelli)
 
 ---
 
