@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 import DefaultLayout from './layout/DefaultLayout';
+import ParticleComponent from './component/particles/Particles';
 
 function App() {
 
@@ -16,6 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <ParticleComponent/>
     <Routes>
       {routes?.map((route, index) => (
         <Route

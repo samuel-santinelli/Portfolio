@@ -1,5 +1,5 @@
 {
-  "name": "marvel-project",
+  "name": "OpenSans-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,19 +11,24 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
-    "@mantine/carousel": "^7.6.1",
+    "@mantine/carousel": "^7.9.2",
     "@mantine/core": "^7.6.1",
     "@mantine/form": "^7.6.1",
     "@mantine/hooks": "^7.6.1",
     "@mantine/notifications": "^7.6.1",
     "@tabler/icons-react": "^2.30.0",
     "axios": "^1.6.7",
-    "embla-carousel-react": "^8.0.0",
+    "embla-carousel-autoplay": "^7.1.0",
+    "embla-carousel-react": "^7.1.0",
     "js-md5": "^0.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-router-dom": "6.14.1",
-    "tabler-icons-react": "^1.56.0"
+    "react-spring": "^9.7.3",
+    "react-tsparticles": "^1.42.2",
+    "tabler-icons-react": "^1.56.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

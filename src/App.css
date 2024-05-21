@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  justify-content: center;
 }
 
 .logo {
@@ -41,95 +41,127 @@
   color: #888;
 }
 
-@font-face {
-  font-family: 'Marvel';
-  src: url('./assets/font/Marvel-Regular/Marvel-Regular.ttf');  
+.header {
+  background-color: transparent !important;
 }
 
 @font-face {
-  font-family: 'RobotoFlex';
-  src: url('./assets/font/Roboto_Flex/static/RobotoFlex-Regular.ttf');  
+  font-family: "OpenSans";
+  src: url("./assets/font/OpenSans/OpenSans_Condensed-Regular.ttf");
 }
 
-body {
-  background-image: url("assets/img/galaxy-2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+@font-face {
+  font-family: "RobotoFlex";
+  src: url("./assets/font/OpenSans/OpenSans_Condensed-Regular.ttf");
+}
+
+* {
+  font-family: "OpenSans";
 }
 
 body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  width: 12px; /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: red;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid red;  /* creates padding around scroll thumb */
+  background-color: #7a37ff; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #7a37ff; /* creates padding around scroll thumb */
   cursor: pointer;
 }
 
-@keyframes moveRightAndBack {
-  0% {
-    transform: translateX(-50%) rotate(-50deg); /* Começa no centro sem rotação horizontal */
-  }
-  20% {
-    transform: translateX(100vw) rotateY(40deg); /* Move para a direita e gira horizontalmente */
-  }
-  40% {
-    transform: translateX(50%) rotateX(40deg); /* Fim da ida, gira horizontalmente */
-  }
-  60% {
-    transform: translateX(0) rotate(40deg); /* Fica no centro */
-  }
-  80% {
-    transform: translateX(-100vw) rotate(40deg) ; /* Move para a esquerda e gira horizontalmente */
-  }
-  100% {
-    transform: translateX(-50%) rotate(180deg); /* Volta ao centro, completa a rotação horizontal */
-  }
-  
-}
-.rotating-image {
-  animation: moveRightAndBack 3.5s linear infinite; 
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  z-index: 999;
+.content {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.loading-text {
-  position: fixed;
-  font-family: "Marvel";
+.block {
+  align-items: start;
+  min-width: 680px;  
+}
+
+.block__title-text {
+  font-size: 5vh !important;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  top: 65%;
-  left: 48.1%;
-  z-index: 999;
 }
 
-.card {
-  height: rem(440px);
+.block__subtitle-text {
+  font-size: 3vh !important; 
+  color: #8d41f1 !important;
+}
+
+.about_section {
+  z-index: 1;
+} 
+
+.neon {
+  color: white !important;
+  text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5), 0 0 0.25em currentColor;
+}
+
+.about_subtitle {
+  text-align: start !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  font-size: 26px !important;
+}
+
+.block_title-card{
+  font-size: 26px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .block {
+    min-width: 0;
+    align-items: center;
+  }
+
+  .block__title-text {
+    font-size: 3vh !important;
+  }
+  .block__subtitle-text {
+    font-size: 2vh !important;
+  }
+}
+
+
+.image {
+  width: '100%';
+  height: '100%';
+  object-fit: 'cover';
+}
+
+.banner-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 800px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Ajuste o valor de opacidade conforme necessário */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-size: cover;
-  background-position: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.title {
-  font-weight: 900;
-  color: var(--mantine-color-white);
-  line-height: 1.2;
-  font-size: rem(32px);
-  margin-top: var(--mantine-spacing-xs);
-  cursor: default;
-}
-
-.category {
-  color: var(--mantine-color-white);
-  opacity: 0.7;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: default;
+.overlay-text {  
+  font-size: 24px !important; /* Ajuste o tamanho do texto conforme necessário */
+  text-align: justify;   
 }

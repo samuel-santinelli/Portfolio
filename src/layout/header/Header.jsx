@@ -1,52 +1,34 @@
 import {
-  ActionIcon,
+  // ActionIcon,
   AppShell,
   Burger,
-  Card,
+  // Card,
   Flex,
   Group,
-  Image,
-  Kbd,
-  SegmentedControl,
+  // Kbd,
+  // SegmentedControl,
   Text,
-  Tooltip,
-  useMantineColorScheme,
+  // Tooltip,
+  // useMantineColorScheme,
 } from "@mantine/core";
-import {
-  IconBook,
-  IconCalendarEvent,
-  IconDeviceTv,
-  IconMoonStars,
-  IconPencil,
-  IconStar,
-  IconSun,
-} from "@tabler/icons-react";
-import Logo from "../../assets/img/captain-america.png";
-import ProfileLogo from "../../assets/img/iron-man-user.png";
-
 
 const HeaderLayout = (toggle, opened) => {
-  const { toggleColorScheme } = useMantineColorScheme();
+  // const { toggleColorScheme } = useMantineColorScheme();
   // const dark = colorScheme === "dark";
 
   return (
     <>
-      <AppShell.Header>
+      <AppShell.Header className="header">
         <Group h="100%" px="md">
           <Burger opened={opened} o hiddenFrom="sm" size="sm" />
           <Flex justify={"center"} align={"center"} gap={"sm"}>
-            <Image src={Logo} w={30} />
-            <Text
-              size="25px"
-              pt="5px"
-              style={{ fontFamily: "Marvel", letterSpacing: "2px" }}
-            >
-              MARVEL
+            <Text size="25px" pt="5px" style={{ fontFamily: "OpenSans" }}>
+              © Code by Samuel
             </Text>
           </Flex>
         </Group>
       </AppShell.Header>
-      <AppShell.Navbar p="md">
+      {/* <AppShell.Navbar p="md">
         <Flex direction={"column"} p={20} gap={"lg"}>
           <Card>
             <Flex direction={"row"} align={"center"} gap={"md"}>
@@ -63,7 +45,7 @@ const HeaderLayout = (toggle, opened) => {
           </Card>
           <Card>
             <Group style={{ cursor: "pointer" }}>
-              <ActionIcon variant="transparent" color="red" size={"sm"}>
+              <ActionIcon variant="transparent" color="red" >
                 <IconStar color="red" />
               </ActionIcon>
               <Text fw={"bold"} size="sm">
@@ -73,40 +55,40 @@ const HeaderLayout = (toggle, opened) => {
           </Card>
           <Card>
             <Group style={{ cursor: "pointer" }}>
-              <ActionIcon variant="transparent" color="red" size={"sm"}>
-                <IconPencil color="red" size={"sm"} />
+              <ActionIcon variant="transparent" color="red" >
+                <IconPencil color="red"  />
               </ActionIcon>
-              <Text fw={"bold"} size={"sm"}>
+              <Text fw={"bold"} >
                 Creators
               </Text>
             </Group>
           </Card>
           <Card>
             <Group style={{ cursor: "pointer" }}>
-              <ActionIcon variant="transparent" color="red" size={"sm"}>
-                <IconCalendarEvent color="red" size={"sm"} />
+              <ActionIcon variant="transparent" color="red" >
+                <IconCalendarEvent color="red"  />
               </ActionIcon>
-              <Text fw={"bold"} size={"sm"}>
+              <Text fw={"bold"} >
                 Events
               </Text>
             </Group>
           </Card>
           <Card>
             <Group style={{ cursor: "pointer" }}>
-              <ActionIcon variant="transparent" color="red" size={"sm"}>
-                <IconDeviceTv color="red" size={"sm"} />
+              <ActionIcon variant="transparent" color="red" >
+                <IconDeviceTv color="red"  />
               </ActionIcon>
-              <Text fw={"bold"} size={"sm"}>
+              <Text fw={"bold"} >
                 Series
               </Text>
             </Group>
           </Card>
           <Card>
             <Group style={{ cursor: "pointer" }}>
-              <ActionIcon variant="transparent" color="red" size={"sm"}>
+              <ActionIcon variant="transparent" color="red" >
                 <IconBook color="red" />
               </ActionIcon>
-              <Text fw={"bold"} size={"sm"}>
+              <Text fw={"bold"} >
                 Comics (HQ)
               </Text>
             </Group>
@@ -133,7 +115,7 @@ const HeaderLayout = (toggle, opened) => {
           (2024) Samuel Santinelli 
           </Text>
         </Flex>
-      </AppShell.Navbar>
+      </AppShell.Navbar> */}
     </>
   );
 };
