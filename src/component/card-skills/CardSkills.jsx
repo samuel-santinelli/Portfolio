@@ -1,7 +1,6 @@
 import { Card, Flex, Text } from "@mantine/core";
 
 const CardSKills = (item) => {
-  console.log(item);
   return (
     <Card>
       <Flex
