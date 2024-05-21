@@ -1,4 +1,4 @@
-# Meu Portfólio
+# Meu Portefólio
 ![image](https://github.com/samuel-santinelli/Portfolio/assets/89052474/8e5ae3af-6e64-48ed-8227-0846eebe3b8b)
 
 Bem-vindo ao meu portfólio! Este projeto foi criado utilizando React e a biblioteca de componentes Mantine. Aqui você encontrará informações sobre meus projetos, habilidades e experiências.
