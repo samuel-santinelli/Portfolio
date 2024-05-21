@@ -78,14 +78,11 @@ Se você deseja contribuir com este projeto, sinta-se à vontade para abrir um P
 
 Se você tiver alguma dúvida ou quiser entrar em contato comigo, pode me encontrar em:
 
-- **Email**: seu-email@dominio.com
-- **LinkedIn**: [seu-perfil-linkedin](https://www.linkedin.com/in/seu-perfil-linkedin/)
-- **GitHub**: [seu-usuario-github](https://github.com/seu-usuario-github)
+- **LinkedIn**: [seu-perfil-linkedin](https://www.linkedin.com/in/samuel-santinelli)
+- **GitHub**: [seu-usuario-github](https://github.com/samuel-santinelli)
 
 ---
 
 Obrigado por visitar meu portfólio! Espero que goste do que vê.
 
 ---
-
-© 2024 Seu Nome. Todos os direitos reservados.
