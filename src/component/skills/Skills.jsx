@@ -1,9 +1,10 @@
 import { Carousel } from "@mantine/carousel";
-import { Card, Flex, Text } from "@mantine/core";
+import { Flex, Text } from "@mantine/core";
 import { IconBolt } from "@tabler/icons-react";
 import skill from "../../models/skills";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import CardSKills from "../card-skills/CardSkills";
 
 const Skills = () => {
   const front_end_skill = skill.filter(
@@ -44,20 +45,7 @@ const Skills = () => {
             // style={{ border: "solid 2px #7a37ff", borderRadius: "10px" }}
           >
             {front_end_skill.map((item, index) => (
-              <Card key={index}>
-                <Flex
-                  direction={"column"}
-                  w={"195px"}
-                  h={"200px"}
-                  justify={"center"}
-                  align={"center"}
-                >
-                  <Text tt={"uppercase"} size={"lg"} fw={"bold"} className="">
-                    {item.name}
-                  </Text>
-                  {item.icon}
-                </Flex>
-              </Card>
+               <CardSKills item={item} key={index} w_number={"195px"} h_number={"200px"}/>
             ))}
           </Flex>
         </Carousel.Slide>
@@ -71,21 +59,7 @@ const Skills = () => {
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
             {back_end_skill.map((item, index) => (
-              <Card key={index}>
-                <Flex
-                  direction={"column"}
-                  w={"200px"}
-                  h={"200px"}
-                  justify={"center"}
-                  align={"center"}
-                >
-                  <Text tt={"uppercase"} size={"lg"} fw={"bold"} className="">
-                    {item.name}
-                  </Text>
-
-                  {item.icon}
-                </Flex>
-              </Card>
+             <CardSKills item={item} key={index} w_number={"200px"} h_number={"200px"}/>
             ))}
           </Flex>
         </Carousel.Slide>
@@ -99,23 +73,8 @@ const Skills = () => {
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
             {database_skill.map((item, index) => (
-              <Card key={index}>
-                <Flex
-                  direction={"column"}
-                  w={"300px"}
-                  h={"500px"}
-                  justify={"center"}
-                  align={"center"}
-                >
-                  <Flex direction={"column"} justify={"center"} align={"center"} gap={"md"}>
-                  <Text tt={"uppercase"} size={"40px"} fw={"bold"} className="">
-                    {item.name}
-                  </Text>
-
-                  {item.icon}
-                </Flex>
-                </Flex>
-              </Card>
+              <CardSKills item={item} key={index}    w_number={"300px"}
+              h_number={"500px"}/>
             ))}
           </Flex>
         </Carousel.Slide>
@@ -129,26 +88,13 @@ const Skills = () => {
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
             {devops_skill.map((item, index) => (
-              <Card key={index}>
-                <Flex
-                  direction={"column"}
-                  w={"350px"}
-                  h={"200px"}
-                  justify={"center"}
-                  align={"center"}
-                >
-                  <Text tt={"uppercase"} size={"lg"} fw={"bold"} className="">
-                    {item.name}
-                  </Text>
-
-                  {item.icon}
-                </Flex>
-              </Card>
+               <CardSKills item={item} key={index}  w_number={"350px"}
+               h_number={"200px"}/>
             ))}
           </Flex>
         </Carousel.Slide>
         <Carousel.Slide>
-          <Text className="block_title-card">Testes</Text>
+          <Text className="block_title-card">Ferramentas de teste</Text>
           <Flex
             wrap={"wrap"}
             gap={"xl"}
@@ -157,21 +103,8 @@ const Skills = () => {
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
             {test_skill.map((item, index) => (
-              <Card key={index}>
-                <Flex
-                  direction={"column"}
-                  w={"400px"}
-                  h={"250px"}
-                  justify={"center"}
-                  align={"center"}
-                >
-                  <Text tt={"uppercase"} size={"lg"} fw={"bold"} className="">
-                    {item.name}
-                  </Text>
-
-                  {item.icon}
-                </Flex>
-              </Card>
+            <CardSKills item={item} key={index} w_number={"400px"}
+            h_number={"250px"}/>
             ))}
           </Flex>
         </Carousel.Slide>

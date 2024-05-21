@@ -1,11 +1,21 @@
 import { Card, Flex, Text } from "@mantine/core";
 
-const CardSKills = (text, icon) => {
+const CardSKills = (item) => {
+  console.log(item);
   return (
-    <Card w={"220px"} h={"220px"}>
-      <Flex direction={"column"} justify={"center"} align={"center"}>
-      <Text tt={"uppercase"} size={"lg"} fw={"bold"}>{text}</Text>
-          {icon}
+    <Card>
+      <Flex
+        direction={"column"}
+        w={item.w_number}
+        h={item.h_number}
+        justify={"center"}
+        align={"center"}
+      >
+        <Text tt={"uppercase"} size={"lg"} fw={"bold"} className="">
+          {item.item.name}
+        </Text>
+
+        {item.item.icon}
       </Flex>
     </Card>
   );

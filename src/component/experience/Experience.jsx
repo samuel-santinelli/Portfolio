@@ -8,7 +8,7 @@ const Experience = () => {
     <Flex direction={"column"} gap={"sm"}>
       <Flex justify={"center"}>
         <Text size="xl" className="block__title-text">
-          Minhas{" "}
+          Minha{" "}
           <Text c={"#9D70F6"} span={true} className="block__title-text">
             experiência <IconLuggage width={"35px"} height={"35px"} />
           </Text>
