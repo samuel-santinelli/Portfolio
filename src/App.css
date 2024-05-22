@@ -60,13 +60,13 @@
 }
 
 body::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
+  width: 12px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #7a37ff; /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid #7a37ff; /* creates padding around scroll thumb */
+  background-color: #7a37ff;
+  border-radius: 20px;
+  border: 3px solid #7a37ff;
   cursor: pointer;
 }
 
@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb {
 
 .block {
   align-items: start;
-  min-width: 680px;  
+  min-width: 680px;
 }
 
 .block__title-text {
@@ -87,13 +87,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .block__subtitle-text {
-  font-size: 3vh !important; 
+  font-size: 3vh !important;
   color: #8d41f1 !important;
 }
 
 .about_section {
   z-index: 1;
-} 
+  flex-direction: row;
+}
 
 .neon {
   color: white !important;
@@ -102,38 +103,18 @@ body::-webkit-scrollbar-thumb {
 
 .about_subtitle {
   text-align: start !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 26px !important;
 }
 
-.block_title-card{
+.block_title-card {
   font-size: 26px !important;
 }
-
-@media only screen and (max-width: 1200px) {
-  .content {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .block {
-    min-width: 0;
-    align-items: center;
-  }
-
-  .block__title-text {
-    font-size: 3vh !important;
-  }
-  .block__subtitle-text {
-    font-size: 2vh !important;
-  }
-}
-
 
 .image {
-  width: '100%';
-  height: '100%';
-  object-fit: 'cover';
+  width: "100%";
+  height: "100%";
+  object-fit: "cover";
 }
 
 .banner-container {
@@ -155,13 +136,153 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Ajuste o valor de opacidade conforme necessário */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.overlay-text {  
-  font-size: 24px !important; /* Ajuste o tamanho do texto conforme necessário */
-  text-align: justify;   
+.overlay-text {
+  font-size: 24px !important;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .block {
+    min-width: 0;
+    align-items: center;
+  }
+
+  .block__title-text {
+    font-size: 3vh !important;
+  }
+  .block__subtitle-text {
+    font-size: 2vh !important;
+  }
+  .about_section {
+    z-index: 1;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .overlay-text {
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 2400px) {
+  .card_skill-front,
+  .card_skill-back {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .card_skill-database {
+    width: 300px;
+    height: 500px;
+  }
+  .card_skill-devops {
+    width: 350px;
+    height: 200px;
+  }
+  .card_skill-test{
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card_skill-front,
+  .card_skill-back {
+    width: 250px !important;
+    height: 170px !important;
+  }
+  .card_skill-database {
+    width: 450px;
+    height: 280px;
+  }
+  .card_skill-devops {
+    width: 350px;
+    height: 170px;
+  }
+  .card_skill-test{
+    width: 350px;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .overlay-text {
+    font-size: 21px !important;
+  }
+  .card_skill-front,
+  .card_skill-back {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .card_skill-database {
+    width: 100px;
+    height: 430px;
+  }
+  .card_skill-devops {
+    width: 100px;
+    height: 184px;
+  }
+  .card_skill-test{
+    width: 100px;
+    height: 266px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .banner-container {
+    height: 1200px;
+  }
+  .overlay-text,
+  .about_subtitle {
+    font-size: 18px !important;
+  }
+  .card_skill-database {
+    width: 100px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .banner-container {
+    height: 1200px;
+  }
+  .overlay-text {
+    font-size: 15px !important;
+  }
+  .about_section-banner {
+    visibility: hidden;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  .card_skill-front,
+  .card_skill-back {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .card_skill-database {
+    width: 80px;
+    height: 370px;
+  }
+  .card_skill-devops {
+    width: 80px;
+    height: 150px;
+  }
+  .card_skill-test{
+    width: 80px;
+    height: 150px;
+  }
 }

@@ -27,10 +27,12 @@ const Skills = () => {
       <Carousel
         controlSize={50}
         pb={"xl"}
+        align={"start"}
         plugins={[autoplay.current]}
         onMouseEnter={autoplay.current.stop}
         onMouseLeave={autoplay.current.reset}
-        withIndicators
+        withIndicators={true}
+        withControls={false}
         slideSize={{ base: "100%", sm: "50%", md: "100%" }}
       >
         <Carousel.Slide>
@@ -45,7 +47,11 @@ const Skills = () => {
             // style={{ border: "solid 2px #7a37ff", borderRadius: "10px" }}
           >
             {front_end_skill.map((item, index) => (
-               <CardSKills item={item} key={index} w_number={"195px"} h_number={"200px"}/>
+              <CardSKills
+                item={item}
+                key={index}            
+                className={"card_skill-front"}
+              />
             ))}
           </Flex>
         </Carousel.Slide>
@@ -59,7 +65,11 @@ const Skills = () => {
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
             {back_end_skill.map((item, index) => (
-             <CardSKills item={item} key={index} w_number={"200px"} h_number={"200px"}/>
+              <CardSKills
+                item={item}
+                key={index}       
+                className={"card_skill-back"}
+              />
             ))}
           </Flex>
         </Carousel.Slide>
@@ -73,8 +83,11 @@ const Skills = () => {
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
             {database_skill.map((item, index) => (
-              <CardSKills item={item} key={index}    w_number={"300px"}
-              h_number={"500px"}/>
+              <CardSKills
+                item={item}
+                key={index}            
+                className={"card_skill-database"}
+              />
             ))}
           </Flex>
         </Carousel.Slide>
@@ -88,8 +101,11 @@ const Skills = () => {
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
             {devops_skill.map((item, index) => (
-               <CardSKills item={item} key={index}  w_number={"350px"}
-               h_number={"200px"}/>
+              <CardSKills
+                item={item}
+                key={index}             
+                className={"card_skill-devops"}
+              />
             ))}
           </Flex>
         </Carousel.Slide>
@@ -103,8 +119,11 @@ const Skills = () => {
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
             {test_skill.map((item, index) => (
-            <CardSKills item={item} key={index} w_number={"400px"}
-            h_number={"250px"}/>
+              <CardSKills
+                item={item}
+                key={index}            
+                className={"card_skill-test"}
+              />
             ))}
           </Flex>
         </Carousel.Slide>

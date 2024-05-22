@@ -6,12 +6,11 @@ import { IconInfoCircle } from "@tabler/icons-react";
 const AboutMe = ({ section_ref }) => {
   return (
     <Flex
-      direction={"row"}
       gap={"xl"}
       className="about_section"
       ref={section_ref}
     >
-      <Image src={Banner} maw={"750px"} />
+      <Image src={Banner} maw={"750px"} className="about_section-banner" />
       <Flex direction={"column"} align={"start"} justify={"start"} gap={"md"}>
         <Text size="xl" className="block__title-text">
           Um pouco{" "}

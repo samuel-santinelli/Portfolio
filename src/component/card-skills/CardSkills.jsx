@@ -1,12 +1,12 @@
 import { Card, Flex, Text } from "@mantine/core";
 
 const CardSKills = (item) => {
+  console.log(item.className);
   return (
     <Card>
       <Flex
-        direction={"column"}
-        w={item.w_number}
-        h={item.h_number}
+        direction={"column"}                
+        className={item.className}
         justify={"center"}
         align={"center"}
       >
