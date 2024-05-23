@@ -14,7 +14,7 @@ const Skills = () => {
   const database_skill = skill.filter((item) => item.type_skill === "database");
   const devops_skill = skill.filter((item) => item.type_skill === "devops");
   const test_skill = skill.filter((item) => item.type_skill === "test");
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
+  const autoplay = useRef(Autoplay({ delay: 2000, stopOnLastSnap: false }));
 
   return (
     <Flex direction={"column"} gap={"sm"}>
