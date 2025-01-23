@@ -3,7 +3,7 @@ import Banner from "../../assets/img/profile-picture-banner.png";
 import { useSpring, animated } from "react-spring";
 import TypeWritter from "../writter/TypeWritter";
 import AboutMe from "../about-me/AboutMe";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import Experience from "../experience/Experience";
 import Skills from "../skills/Skills";
 // import Projects from "../projects/Projects";
@@ -15,44 +15,54 @@ const ContentComponent = () => {
     config: { mass: 1, tension: 80, friction: 40, duration: 4000 },
     loop: { reverse: true },
   });
-  const section1Ref = useRef(null);
-  const section2Ref = useRef(null);
-  const section3Ref = useRef(null);
-  const section4Ref = useRef(null);
+  // const section1Ref = useRef(null);
+  // const section2Ref = useRef(null);
+  // const section3Ref = useRef(null);
+  // const section4Ref = useRef(null);
 
-  const sectionRefs = [section1Ref, section2Ref, section3Ref];
+  // const sectionRefs = [section1Ref, section2Ref, section3Ref];
 
-  let currentSectionIndex = 0;
+  // let currentSectionIndex = 0;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      const currentSection = sectionRefs[currentSectionIndex].current;
-      const nextSection = sectionRefs[currentSectionIndex + 1]?.current;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScroll = window.scrollY;
+  //     const currentSection = sectionRefs[currentSectionIndex].current;
+  //     const nextSection = sectionRefs[currentSectionIndex + 1]?.current;
 
-      if (nextSection && currentScroll >= nextSection.offsetTop) {
-        currentSectionIndex++;
-        nextSection.scrollIntoView({ behavior: "smooth" });
-      } else if (currentScroll < currentSection.offsetTop) {
-        if (currentSectionIndex > 0) {
-          currentSectionIndex--;
-          const prevSection = sectionRefs[currentSectionIndex].current;
-          prevSection.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    };
+  //     if (nextSection && currentScroll >= nextSection.offsetTop) {
+  //       currentSectionIndex++;
+  //       nextSection.scrollIntoView({ behavior: "smooth" });
+  //     } else if (currentScroll < currentSection.offsetTop) {
+  //       if (currentSectionIndex > 0) {
+  //         currentSectionIndex--;
+  //         const prevSection = sectionRefs[currentSectionIndex].current;
+  //         prevSection.scrollIntoView({ behavior: "smooth" });
+  //       }
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <Flex direction={"column"} gap={"100px"}>
-      <Flex gap={"xl"} className="content" ref={section1Ref}>
-        <Flex direction="column" className="block" gap={"xs"}>
+    <Flex direction={"column"}>
+      <Flex
+        gap={"xl"}
+        mt={-100}
+        justify={"center"}
+        align={"center"}
+        className="content"
+        style={{
+          height: "100vh",
+          display: "flex",
+        }}
+      >
+        <Flex direction="column" className="block" gap={"xs"} >
           <Text className="block__title-text">
             <TypeWritter
               strings={[
@@ -75,9 +85,9 @@ const ContentComponent = () => {
           <Image src={Banner} />
         </animated.div>
       </Flex>
-      <AboutMe section_ref={section2Ref} />
-      <Experience section_ref={section3Ref} />
-      <Skills section_ref={section4Ref}/>
+      <AboutMe />
+      <Experience />
+      <Skills />
       {/* <Projects/> */}
     </Flex>
   );

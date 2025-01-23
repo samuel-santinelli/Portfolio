@@ -3,9 +3,9 @@ import { IconLuggage } from "@tabler/icons-react";
 import Banner from "../../assets/img/experience-banner.png";
 import CompanyLogo from "../../assets/img/adviseuit_logo.png";
 
-const Experience = () => {
+const Experience = ({section_ref2}) => {
   return (
-    <Flex direction={"column"} gap={"sm"}>
+    <Flex direction={"column"} gap={"sm"} ref={section_ref2}>
       <Flex justify={"center"}>
         <Text size="xl" className="block__title-text">
           Minha{" "}

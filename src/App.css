@@ -179,6 +179,44 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.control:hover {
+  color: white;
+  transition: 1s;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card-grow {
+  transition: transform 0.3s ease-in-out;  /* Transição suave para o crescimento */
+}
+
+.card-grow:hover .card-icon {
+  transform: rotate(360deg);
+  transition: transform 1s ease; /* Transição suave */
+}
+
+.card-icon {
+  transition: transform 0.5s ease; /* Garantir suavidade */
+  max-width: 120px;
+}
+
+.card-text {
+  display: none;  /* Inicialmente o texto está invisível */
+  margin-left: 10px;  /* Adiciona um pequeno espaço entre o cartão e o texto */
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Transição suave para a visibilidade */
+}
+
+.card-container:hover .card-text {
+  display: inline-block; /* Exibe o texto quando o hover é ativado */
+  opacity: 1; /* O texto aparece suavemente */
+}
+
 @media only screen and (max-width: 2400px) {
   .card_skill-front,
   .card_skill-back {
@@ -200,10 +238,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (min-width: 1200px) {
-  .card_skill-front,
-  .card_skill-back {
+  .card_skill-front {
     width: 250px !important;
     height: 170px !important;
+  }
+  .card_skill-back {
+    width: 250px !important;
+    height: 200px !important;
   }
   .card_skill-database {
     width: 450px;
@@ -285,4 +326,32 @@ body::-webkit-scrollbar-thumb {
     width: 80px;
     height: 150px;
   }
+}
+
+.card_slide {
+  height: 440px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.title_slide {
+  font-weight: 900;
+  color: var(--mantine-color-white);
+  line-height: 1.2 !important;
+  font-size: 32px !important;
+  margin-top: var(--mantine-spacing-xs) !important;
+  cursor: default !important;
+}
+
+.category_slide {
+  color: var(--mantine-color-white);
+  opacity: 0.7;
+  font-weight: 700;
+  font-size: 15px !important;
+  text-transform: uppercase;
+  cursor: default;
 }

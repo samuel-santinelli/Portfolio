@@ -6,7 +6,7 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import CardSKills from "../card-skills/CardSkills";
 
-const Skills = () => {
+const Skills = ({section_ref3}) => {
   const front_end_skill = skill.filter(
     (item) => item.type_skill === "front-end"
   );
@@ -17,7 +17,7 @@ const Skills = () => {
   const autoplay = useRef(Autoplay({ delay: 2000, stopOnLastSnap: false }));
 
   return (
-    <Flex direction={"column"} gap={"sm"}>
+    <Flex direction={"column"} gap={"sm"} ref={section_ref3}>
       <Text size="xl" className="block__title-text">
         Minhas{" "}
         <Text c={"#9D70F6"} span={true} className="block__title-text">
@@ -33,6 +33,7 @@ const Skills = () => {
         onMouseLeave={autoplay.current.reset}
         withIndicators={true}
         withControls={false}
+        loop={true}
         slideSize={{ base: "100%", sm: "50%", md: "100%" }}
       >
         <Carousel.Slide>
@@ -41,7 +42,7 @@ const Skills = () => {
             wrap={"wrap"}
             gap={"xl"}
             justify={"center"}
-            h={"500px"}
+            mah={"700px"}
             align={"center"}
             p={"15px"}
             // style={{ border: "solid 2px #7a37ff", borderRadius: "10px" }}
@@ -50,7 +51,7 @@ const Skills = () => {
               <CardSKills
                 item={item}
                 key={index}            
-                className={"card_skill-front"}
+                  className="card_skill-front card-grow"
               />
             ))}
           </Flex>
@@ -61,6 +62,7 @@ const Skills = () => {
             wrap={"wrap"}
             gap={"xl"}
             justify={"center"}
+            mah={"100px"}
             p={"15px"}
             // style={{ border: "solid 5px #7a37ff", borderRadius: "10px" }}
           >
@@ -68,7 +70,7 @@ const Skills = () => {
               <CardSKills
                 item={item}
                 key={index}       
-                className={"card_skill-back"}
+                className={"card_skill-back card-grow"}
               />
             ))}
           </Flex>
@@ -86,13 +88,13 @@ const Skills = () => {
               <CardSKills
                 item={item}
                 key={index}            
-                className={"card_skill-database"}
+                className={"card_skill-database card-grow"}
               />
             ))}
           </Flex>
         </Carousel.Slide>
         <Carousel.Slide>
-          <Text className="block_title-card">DevOps</Text>
+          <Text className="block_title-card card-grow">DevOps</Text>
           <Flex
             wrap={"wrap"}
             gap={"xl"}
@@ -104,7 +106,7 @@ const Skills = () => {
               <CardSKills
                 item={item}
                 key={index}             
-                className={"card_skill-devops"}
+                className={"card_skill-devops card-grow"}
               />
             ))}
           </Flex>
@@ -122,7 +124,7 @@ const Skills = () => {
               <CardSKills
                 item={item}
                 key={index}            
-                className={"card_skill-test"}
+                className={"card_skill-test card-grow"}
               />
             ))}
           </Flex>

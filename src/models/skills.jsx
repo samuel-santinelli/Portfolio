@@ -23,221 +23,239 @@ import {
   import { SiApache, SiApachejmeter, SiAxios, SiDatadog, SiExpress, SiInsomnia, SiJunit5, SiKoa, SiMocha, SiPostgresql, SiPostman, SiPrisma, SiXampp } from "react-icons/si";
   import { TbBrandReactNative } from "react-icons/tb";
 
-const skill = [
+  const skill = [
     // Front-end
     {
       name: "React",
-      icon: <FaReact color="#61DAFB" size={"70px"} />,
+      icon: <FaReact color="inherit" size={"70px"} />,
       type_skill: "front-end",
+      color: "#61DAFB",
     },
     {
       name: "React Native",
-      icon: <TbBrandReactNative color="#61DAFB" size={"70px"} />,
+      icon: <TbBrandReactNative size={"70px"} />,
       type_skill: "front-end",
+      color: "#61DAFB",
     },
     {
       name: "Next.js",
-      icon: <RiNextjsFill color="#61DAFB" size={"70px"} />,
+      icon: <RiNextjsFill size={"70px"} />,
       type_skill: "front-end",
+      color: "#61DAFB",
     },
     {
       name: "Vue.js",
-      icon: <IconBrandVue color="#4FC08D" size={"70px"} />,
+      icon: <IconBrandVue  size={"70px"} />,
       type_skill: "front-end",
+      color: "#4FC08D",
     },
     {
       name: "Angular",
-      icon: <IconBrandAngular color="#DD0031" size={"70px"} />,
+      icon: <IconBrandAngular size={"70px"} />,
       type_skill: "front-end",
+      color: "#DD0031",
     },
     {
       name: "JavaScript",
-      icon: <IconBrandJavascript color="#F7DF1E" size={"70px"} />,
+      icon: <IconBrandJavascript size={"70px"} />,
       type_skill: "front-end",
+      color: "#F7DF1E",
     },
     {
       name: "TypeScript",
-      icon: <IconBrandTypescript color="#3178C6" size={"70px"} />,
+      icon: <IconBrandTypescript size={"70px"} />,
       type_skill: "front-end",
+      color: "#3178C6",
     },
     {
       name: "Mantine",
-      icon: <IconBrandMantine color="#339AF0" size={"70px"} />,
+      icon: <IconBrandMantine size={"70px"} />,
       type_skill: "front-end",
+      color: "#339AF0",
     },
     {
       name: "Tailwind",
-      icon: <IconBrandTailwind color="#06B6D4" size={"70px"} />,
+      icon: <IconBrandTailwind size={"70px"} />,
       type_skill: "front-end",
+      color: "#06B6D4",
     },
     {
       name: "Sass",
-      icon: <FaSass color="#CD6799" size={"70px"} />, // Azul claro
+      icon: <FaSass size={"70px"} />,
       type_skill: "front-end",
+      color: "#CD6799",
     },
     {
       name: "Bootstrap",
-      icon: <IconBrandBootstrap color="#7952B3" size={"70px"} />,
+      icon: <IconBrandBootstrap size={"70px"} />,
       type_skill: "front-end",
+      color: "#7952B3",
     },
     {
       name: "Redux",
-      icon: <IconBrandRedux color="#764ABC" size={"70px"} />, // Roxo
+      icon: <IconBrandRedux size={"70px"} />,
       type_skill: "front-end",
+      color: "#764ABC",
     },
     {
       name: "Axios",
-      icon: <SiAxios color="#764ABC" size={"70px"} />, // Roxo
+      icon: <SiAxios size={"70px"} />,
       type_skill: "front-end",
+      color: "#764ABC",
     },
-    
+  
     // Back-end
     {
       name: "Node.js",
-      icon: <IconBrandNodejs color="#339933" size={"100px"} />,
+      icon: <IconBrandNodejs size={"100px"} />,
       type_skill: "back-end",
+      color: "#339933",
     },
     {
       name: "Java",
-      icon: <FaJava color="red" size={"100px"} />,
+      icon: <FaJava size={"100px"} />,
       type_skill: "back-end",
+      color: "red",
     },
     {
       name: "Kotlin",
-      icon: <IconBrandKotlin color="#0095D5" size={"100px"} />,
+      icon: <IconBrandKotlin size={"100px"} />,
       type_skill: "back-end",
+      color: "#0095D5",
     },
     {
       name: "PHP",
-      icon: <IconBrandPhp color="#777BB4" size={"100px"} />,
+      icon: <IconBrandPhp size={"100px"} />,
       type_skill: "back-end",
+      color: "#777BB4",
     },
     {
       name: "Python",
-      icon: <FaPython color="#3776AB" size={"100px"} />, // Azul mais escuro
+      icon: <FaPython size={"100px"} />,
       type_skill: "back-end",
-    },
-    {
-      name: "JavaScript",
-      icon: <IconBrandJavascript color="#F7DF1E" size={"70px"} />,
-      type_skill: "back-end",
-    },
-    {
-      name: "TypeScript",
-      icon: <IconBrandTypescript color="#3178C6" size={"70px"} />,
-      type_skill: "back-end",
+      color: "#3776AB",
     },
     {
       name: "Express",
-      icon: <SiExpress color="#000000" size={"100px"} />, // Preto
+      icon: <SiExpress size={"100px"} />,
       type_skill: "back-end",
+      color: "#000000",
     },
     {
       name: "SpringBoot",
-      icon: <BiLogoSpringBoot color="#6AAD3D" size={"100px"} />, // Verde
+      icon: <BiLogoSpringBoot size={"100px"} />,
       type_skill: "back-end",
+      color: "#6AAD3D",
     },
     {
       name: "Koa",
-      icon: <SiKoa  color="#AA8B4B" size={"100px"} />, // Marrom claro
+      icon: <SiKoa size={"100px"} />,
       type_skill: "back-end",
+      color: "#AA8B4B",
     },
-    {
-      name: "Axios",
-      icon: <SiAxios color="#764ABC" size={"70px"} />, // Roxo
-      type_skill: "back-end",
-    }
-    ,
   
     // Databases
     {
       name: "MySQL",
-      icon: <IconBrandMysql color="#4479A1" size={"100px"} />,
+      icon: <IconBrandMysql size={"100px"} />,
       type_skill: "database",
+      color: "#4479A1",
     },
     {
       name: "PostgreSQL",
-      icon: <SiPostgresql color="#336791" size={"100px"} />,
+      icon: <SiPostgresql size={"100px"} />,
       type_skill: "database",
-    },
-    {
-      name: "MongoDB",
-      icon: <IconBrandMongodb color="#47A248" size={"100px"} />,
-      type_skill: "database",
+      color: "#336791",
     },
     {
       name: "Prisma",
-      icon: <SiPrisma color="#0084FF" size={"100px"} />, // Azul
+      icon: <SiPrisma size={"100px"} />,
       type_skill: "database",
+      color: "#0084FF",
     },
   
     // DevOps
     {
       name: "Docker",
-      icon: <IconBrandDocker color="#2496ED" size={"70px"} />,
+      icon: <IconBrandDocker size={"70px"} />,
       type_skill: "devops",
+      color: "#2496ED",
     },
     {
       name: "Kubernetes",
-      icon: <AiOutlineKubernetes color="#0091C8" size={"70px"} />, // Azul
+      icon: <AiOutlineKubernetes size={"70px"} />,
       type_skill: "devops",
+      color: "#0091C8",
     },
     {
       name: "Git",
-      icon: <IconBrandGithub color="#F05032" size={"70px"} />,
+      icon: <IconBrandGithub size={"70px"} />,
       type_skill: "devops",
+      color: "#F05032",
     },
     {
       name: "Gitlab",
-      icon: <FaGitlab color="#FC6D26" size={"70px"} />, // Laranja mais claro
+      icon: <FaGitlab size={"70px"} />,
       type_skill: "devops",
+      color: "#FC6D26",
     },
     {
       name: "Apache",
-      icon: <SiApache color="#EC7E36" size={"70px"} />, // Laranja avermelhado
+      icon: <SiApache size={"70px"} />,
       type_skill: "devops",
+      color: "#EC7E36",
     },
     {
       name: "Xampp",
-      icon: <SiXampp color="#F05032" size={"70px"} />, // Laranja amarelado
+      icon: <SiXampp size={"70px"} />,
       type_skill: "devops",
+      color: "#F05032",
     },
     {
       name: "Datadog",
-      icon: <SiDatadog color="#6F2DBD" size={"70px"} />, // Roxo
+      icon: <SiDatadog size={"70px"} />,
       type_skill: "devops",
-    },  
+      color: "#6F2DBD",
+    },
+  
     // Ferramentas de Teste
     {
       name: "JMeter",
-      icon: <SiApachejmeter color="#D22128" size={"70px"} />,
+      icon: <SiApachejmeter size={"70px"} />,
       type_skill: "test",
+      color: "#D22128",
     },
     {
       name: "Cypress",
-      icon: <IconBrandCypress color="#17202C" size={"70px"} />,
+      icon: <IconBrandCypress size={"70px"} />,
       type_skill: "test",
+      color: "#17202C",
     },
     {
       name: "Postman",
-      icon: <SiPostman color="#FF6C37" size={"70px"} />,
+      icon: <SiPostman size={"70px"} />,
       type_skill: "test",
+      color: "#FF6C37",
     },
     {
       name: "Insomnia",
-      icon: <SiInsomnia color="#5849BE" size={"70px"} />, // Roxo
+      icon: <SiInsomnia size={"70px"} />,
       type_skill: "test",
+      color: "#5849BE",
     },
     {
       name: "Mocha",
-      icon: <SiMocha color="#8D6748" size={"70px"} />,
+      icon: <SiMocha size={"70px"} />,
       type_skill: "test",
+      color: "#8D6748",
     },
     {
       name: "Junit",
-      icon: <SiJunit5 color="#99CC00" size={"70px"} />,
+      icon: <SiJunit5 size={"70px"} />,   
       type_skill: "test",
+      color: "#99CC00",
     },
   ];
+  
 
   export default skill
