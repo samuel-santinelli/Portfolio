@@ -7,7 +7,6 @@ import {
     IconBrandJavascript,
     IconBrandKotlin,
     IconBrandMantine,
-    IconBrandMongodb,
     IconBrandMysql,
     IconBrandNodejs,
     IconBrandPhp,

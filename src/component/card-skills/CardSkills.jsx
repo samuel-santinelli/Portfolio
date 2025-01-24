@@ -126,7 +126,7 @@ const CardSKills = (item) => {
         }
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = "transparent";
+        e.currentTarget.style.backgroundColor = "";
         e.currentTarget.style.color = item.item.color;
         const icon = e.currentTarget.querySelector(".card-icon");
         if (icon) {
