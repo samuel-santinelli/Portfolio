@@ -183,14 +183,14 @@ const CardSKills = (item) => {
         >
           {item.item.icon}
         </Flex>
-        <Button
+        {/* <Button
           className="card-text"
           onClick={() => setInfoModal(true)}
           variant="outline"
           color="white"
         >
           Visualizar Projetos
-        </Button>{" "}
+        </Button>{" "} */}
       </Flex>
     </Card>
   );
